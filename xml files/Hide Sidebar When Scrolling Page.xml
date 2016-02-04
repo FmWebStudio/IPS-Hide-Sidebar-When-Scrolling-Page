@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin name="Hide Sidebar When Scrolling Page" version_long="10010" version_human="1.0.1" author="Fm Web (Recouse)" website="http://fm-web.studio" update_check=""><hooks/><htmlFiles/><cssFiles/><jsFiles><js filename="hideSidebar.js">LyoqDQoJKiBIaWRlIFNpZGViYXIgV2hlbiBTY3JvbGxpbmcgUGFnZQ0KCSogQnkgRm0gV2ViIChSZWNvdXNlKQ0KCSogaHR0cDovL2ZtLXdlYi5zdHVkaW8NCiovDQoNCiQoZG9jdW1lbnQpLnJlYWR5KGZ1bmN0aW9uKCkgew0KICB2YXIgZm13Q29udGVudCAgPSAnI2lwc0xheW91dF9tYWluQXJlYSc7DQogIHZhciBmbXdTaWRlYmFyICA9ICcjaXBzTGF5b3V0X3NpZGViYXInOw0KCXZhciBmbXdIZWlnaHQgPSAkKCcjaXBzTGF5b3V0X3NpZGViYXIgLmNXaWRnZXRDb250YWluZXInKS5oZWlnaHQoKTsNCgkNCglpZigkKHdpbmRvdykud2lkdGgoKSA+IDEyMDApew0KCQkkKHdpbmRvdykuc2Nyb2xsKGZ1bmN0aW9uKCkgew0KCQkJaWYgKCQodGhpcykuc2Nyb2xsVG9wKCkgPiBmbXdIZWlnaHQpIHsNCgkJCQkkKGZtd1NpZGViYXIpLnN0b3AodHJ1ZSkuZmFkZU91dCgyMDAsIGZ1bmN0aW9uKCkgew0KCQkJCQkkKGZtd0NvbnRlbnQpLnN0b3AodHJ1ZSkuYW5pbWF0ZSgyMDApOw0KCQkJCX0pOw0KCQkJfSBlbHNlIHsNCgkJCQkkKGZtd0NvbnRlbnQpLnN0b3AodHJ1ZSkuYW5pbWF0ZSgyMDAsIGZ1bmN0aW9uKCkgew0KCQkJCQkkKGZtd1NpZGViYXIpLnN0b3AodHJ1ZSkuZmFkZUluKDIwMCk7DQoJCQkJfSk7DQoJCQl9DQoJCX0pOw0KCX0NCn0pOw==</js></jsFiles><resourcesFiles/><lang/><versions><version long="10000" human="1.0.0"><![CDATA[//<?php
+<plugin name="Hide Sidebar When Scrolling Page" version_long="10020" version_human="1.0.2" author="Fm Web (Recouse)" website="http://fm-web.studio" update_check=""><hooks/><htmlFiles/><cssFiles/><jsFiles><js filename="hideSidebar.js">LyoqDQoJKiBIaWRlIFNpZGViYXIgV2hlbiBTY3JvbGxpbmcgUGFnZQ0KCSogQnkgRm0gV2ViIChSZWNvdXNlKQ0KCSogaHR0cDovL2ZtLXdlYi5zdHVkaW8NCiovDQoNCiQoZG9jdW1lbnQpLnJlYWR5KGZ1bmN0aW9uKCkgew0KCXZhciBmbXdDb250ZW50ICA9ICdib2R5W2RhdGEtcGFnZWFwcD0iZm9ydW1zIl0gI2lwc0xheW91dF9tYWluQXJlYSc7DQoJdmFyIGZtd1NpZGViYXIgID0gJ2JvZHlbZGF0YS1wYWdlYXBwPSJmb3J1bXMiXSAjaXBzTGF5b3V0X3NpZGViYXInOw0KCXZhciBmbXdIZWlnaHQgPSAkKCdib2R5W2RhdGEtcGFnZWFwcD0iZm9ydW1zIl0gI2lwc0xheW91dF9zaWRlYmFyIC5jV2lkZ2V0Q29udGFpbmVyJykuaGVpZ2h0KCk7DQoJDQoJaWYoJCh3aW5kb3cpLndpZHRoKCkgPiAxMjAwKXsNCgkJJCh3aW5kb3cpLnNjcm9sbChmdW5jdGlvbigpIHsNCgkJCWlmICgkKHRoaXMpLnNjcm9sbFRvcCgpID4gZm13SGVpZ2h0KSB7DQoJCQkJJChmbXdTaWRlYmFyKS5zdG9wKHRydWUpLmZhZGVPdXQoMjAwLCBmdW5jdGlvbigpIHsNCgkJCQkJJChmbXdDb250ZW50KS5zdG9wKHRydWUpLmFuaW1hdGUoMjAwKTsNCgkJCQl9KTsNCgkJCX0gZWxzZSB7DQoJCQkJJChmbXdDb250ZW50KS5zdG9wKHRydWUpLmFuaW1hdGUoMjAwLCBmdW5jdGlvbigpIHsNCgkJCQkJJChmbXdTaWRlYmFyKS5zdG9wKHRydWUpLmZhZGVJbigyMDApOw0KCQkJCX0pOw0KCQkJfQ0KCQl9KTsNCgl9DQp9KTs=</js></jsFiles><resourcesFiles/><lang/><versions><version long="10000" human="1.0.0"><![CDATA[//<?php
 
 
 /* To prevent PHP errors (extending class does not exist) revealing path */
@@ -42,6 +42,35 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
  * 1.0.1 Upgrade Code
  */
 class ips_plugins_setup_upg_10010
+{
+	/**
+	 * ...
+	 *
+	 * @return	array	If returns TRUE, upgrader will proceed to next step. If it returns any other value, it will set this as the value of the 'extra' GET parameter and rerun this step (useful for loops)
+	 */
+	public function step1()
+	{
+		
+
+		return TRUE;
+	}
+	
+	// You can create as many additional methods (step2, step3, etc.) as is necessary.
+	// Each step will be executed in a new HTTP request
+}]]></version><version long="10020" human="1.0.2"><![CDATA[//<?php
+
+
+/* To prevent PHP errors (extending class does not exist) revealing path */
+if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
+{
+	header( ( isset( $_SERVER['SERVER_PROTOCOL'] ) ? $_SERVER['SERVER_PROTOCOL'] : 'HTTP/1.0' ) . ' 403 Forbidden' );
+	exit;
+}
+
+/**
+ * 1.0.2 Upgrade Code
+ */
+class ips_plugins_setup_upg_10020
 {
 	/**
 	 * ...

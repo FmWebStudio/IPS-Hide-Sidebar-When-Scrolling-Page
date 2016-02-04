@@ -5,9 +5,9 @@
 */
 
 $(document).ready(function() {
-  var fmwContent  = '#ipsLayout_mainArea';
-  var fmwSidebar  = '#ipsLayout_sidebar';
-	var fmwHeight = $('#ipsLayout_sidebar .cWidgetContainer').height();
+	var fmwContent  = 'body[data-pageapp="forums"] #ipsLayout_mainArea';
+	var fmwSidebar  = 'body[data-pageapp="forums"] #ipsLayout_sidebar';
+	var fmwHeight = $('body[data-pageapp="forums"] #ipsLayout_sidebar .cWidgetContainer').height();
 	
 	if($(window).width() > 1200){
 		$(window).scroll(function() {
